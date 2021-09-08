@@ -6,3 +6,12 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+#grad1 {
+  background-image: linear-gradient(#134d71, #f7e4bf);
+}
+
+.text-style {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+}
