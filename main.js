@@ -7,12 +7,6 @@ var receiveMessageButton = document.querySelector('.form-button');
 
 
 
-
-
-
-
-
-
 // affirmation and mantra listings are below
 var affirmations = [
   "I forgive myself and set myself free.",
@@ -50,3 +44,18 @@ var mantras = [
 
 
 // event listeners are below
+receiveMessageButton.addEventListener('click', showMessage);
+
+
+// functions are below
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function showMessage() {
+  event.preventDefault();
+  var newAffirmation = affirmations[getRandomIndex(affirmations)];
+  var newMantra = mantras[getRandomIndex(mantras)];
+  console.log(newAffirmation);
+  console.log(newMantra);
+}
