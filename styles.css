@@ -6,3 +6,89 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+
+body {
+  background-image: linear-gradient(#134d71, #f7e4bf);
+  height: 100vh;
+}
+
+.text-style {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.message-type {
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 100px 1px 1px 1px;
+  margin-bottom: 5px;
+}
+
+.form-style {
+  background: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  margin: auto;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+.form-radio {
+  margin-right: 10px;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.radio-label {
+  margin-left: 1%;
+}
+
+.image-box {
+  background: #ffffff;
+  padding: 50px 20px;
+  margin: 100px auto;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.form-button {
+  background: #134d71;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 20px 0px 5px 0px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: purple;
+}
+
+.picture {
+  display: block;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mantra-button {
+  margin-left: 15%;
+}
+
+.hidden {
+  display: none!important;
+}
+
+.message {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-weight: normal;
+}
