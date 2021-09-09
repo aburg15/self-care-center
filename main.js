@@ -1,7 +1,7 @@
 // query selector variables are below
-var medidationImage = document.querySelector('.picture');
-var receiveMessageButton = document.querySelector('.form-button');
-var imageBox = document.querySelector('.image-box');
+var medidationImage = document.querySelector('#picture');
+var receiveMessageButton = document.querySelector('#form-button');
+var imageBox = document.querySelector('#image-box');
 var affirmationRadioButton = document.querySelector('#affirmation-button');
 var mantraRadioButton = document.querySelector('#mantra-button');
 
@@ -56,8 +56,10 @@ function getRandomIndex(array) {
 function generateMessage() {
   var newAffirmation = affirmations[getRandomIndex(affirmations)];
   var newMantra = mantras[getRandomIndex(mantras)];
-  medidationImage.classList.add('hidden');
-  displayMessage(newMantra, newAffirmation);
+  if (mantraRadioButton.checked || affirmationRadioButton.checked) {
+    medidationImage.classList.add('hidden');
+    displayMessage(newMantra, newAffirmation);
+  }
 }
 
 function displayMessage(newMantra, newAffirmation) {
