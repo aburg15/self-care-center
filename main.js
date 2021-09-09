@@ -1,4 +1,4 @@
-// query selector variables are below
+// query selector variables
 var medidationImage = document.querySelector('#picture');
 var receiveMessageButton = document.querySelector('#receive-message-button');
 var affirmationRadioButton = document.querySelector('#affirmation-button');
@@ -6,7 +6,7 @@ var mantraRadioButton = document.querySelector('#mantra-button');
 var clearButton = document.querySelector('#clear-button');
 var message = document.querySelector('#clear-message');
 
-// affirmation and mantra listings are below
+// affirmation and mantra listings
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -42,7 +42,7 @@ var mantras = [
 ];
 
 
-// event listeners are below
+// event listeners
 receiveMessageButton.addEventListener('click', function(event) {
   event.preventDefault();
   generateMessage();
