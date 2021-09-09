@@ -57,13 +57,17 @@ function generateMessage() {
   var newAffirmation = affirmations[getRandomIndex(affirmations)];
   var newMantra = mantras[getRandomIndex(mantras)];
   medidationImage.classList.add('hidden');
+  displayMessage(newMantra, newAffirmation);
+}
+
+function displayMessage(newMantra, newAffirmation) {
   if (mantraRadioButton.checked) {
     imageBox.innerHTML += `
-    <h2 class='message'>${newMantra}</h2>
-  `
+  <h2 class='message'>${newMantra}</h2>
+`
   } else if (affirmationRadioButton.checked) {
     imageBox.innerHTML += `
-      <h2 class='message'>${newAffirmation}</h2>
-    `
+    <h2 class='message'>${newAffirmation}</h2>
+  `
   }
 }

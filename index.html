@@ -10,22 +10,25 @@
 </head>
 
 <body>
-  <h1 class='text-style'>✨ Self Care Center ✨</h1>
+  <main>
+    <header>
+      <h1 class='text-style'>✨ Self Care Center ✨</h1>
+    </header>
+    <h2 class='message-type'>Which type of message?</h2>
 
-  <h2 class='message-type'>Which type of message?</h2>
+    <form class='form-style'>
+      <input type='radio' name='message' value='affirmation' id='affirmation-button'>
+      <label class="radio-label" for='affirmation'>affirmation</label>
+      <input type='radio' class='mantra-button' name='message' value='mantra' id='mantra-button'>
+      <label class="radio-label" for='mantra'>mantra</label><br />
+      <button class='form-button'>Receive Message</button>
+    </form>
 
-  <form class='form-style'>
-    <input type='radio' name='message' value='affirmation' id='affirmation-button'>
-    <label class="radio-label" for='affirmation'>affirmation</label>
-    <input type='radio' name='message' value='mantra' id='mantra-button'>
-    <label class="radio-label" for='mantra'>mantra</label><br />
-    <button class='form-button'>Receive Message</button>
-  </form>
-
-  <section class='image-box'>
-    <img class="picture" src='assets/meditate.svg' alt='meditation icon'>
-  </section>
-  <script type="text/javascript" src="main.js"></script>
+    <section class='image-box'>
+      <img class="picture" src='assets/meditate.svg' alt='meditation icon'>
+    </section>
+    <script type="text/javascript" src="main.js"></script>
+  </main>
 </body>
 
 </html>
