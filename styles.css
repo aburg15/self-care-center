@@ -8,22 +8,23 @@ black - #000000;
 */
 
 
-body {
+.body {
   background-image: linear-gradient(#134d71, #f7e4bf);
   height: 100vh;
 }
 
-.text-style {
-  color: #ffffff;
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  margin-top: 50px;
-}
-
+.text-style
 .message-type {
   color: #ffffff;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
+}
+
+.text-style {
+  margin-top: 50px;
+}
+
+.message-type {
   padding: 100px 1px 1px 1px;
   margin-bottom: 5px;
 }
@@ -64,7 +65,7 @@ body {
   color: #ffffff;
   border-radius: 5px;
   padding: 5px 20px;
-  margin: 20px 0px 5px 0px;
+  margin: 20px 5px 5px 0px;
   cursor: pointer;
 }
 
