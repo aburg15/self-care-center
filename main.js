@@ -1,11 +1,12 @@
-// query selector variables are below
-var medidationImage = document.querySelector('.picture');
-var receiveMessageButton = document.querySelector('.form-button');
-var imageBox = document.querySelector('.image-box');
+// query selector variables
+var medidationImage = document.querySelector('#picture');
+var receiveMessageButton = document.querySelector('#receive-message-button');
 var affirmationRadioButton = document.querySelector('#affirmation-button');
 var mantraRadioButton = document.querySelector('#mantra-button');
+var clearButton = document.querySelector('#clear-button');
+var message = document.querySelector('#clear-message');
 
-// affirmation and mantra listings are below
+// affirmation and mantra listings
 var affirmations = [
   "I forgive myself and set myself free.",
   "I believe I can be all that I want to be.",
@@ -41,12 +42,16 @@ var mantras = [
 ];
 
 
-// event listeners are below
+// event listeners
 receiveMessageButton.addEventListener('click', function(event) {
   event.preventDefault();
   generateMessage();
 });
 
+clearButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  clearMessage();
+});
 
 // functions are below
 function getRandomIndex(array) {
@@ -56,18 +61,26 @@ function getRandomIndex(array) {
 function generateMessage() {
   var newAffirmation = affirmations[getRandomIndex(affirmations)];
   var newMantra = mantras[getRandomIndex(mantras)];
-  medidationImage.classList.add('hidden');
-  displayMessage(newMantra, newAffirmation);
+  if (mantraRadioButton.checked || affirmationRadioButton.checked) {
+    medidationImage.classList.add('hidden');
+    message.classList.remove('hidden');
+    displayMessage(newMantra, newAffirmation);
+  }
 }
 
 function displayMessage(newMantra, newAffirmation) {
   if (mantraRadioButton.checked) {
-    imageBox.innerHTML += `
+    message.innerHTML = `
   <h2 class='message'>${newMantra}</h2>
 `
   } else if (affirmationRadioButton.checked) {
-    imageBox.innerHTML += `
+    message.innerHTML = `
     <h2 class='message'>${newAffirmation}</h2>
   `
   }
+}
+
+function clearMessage() {
+  medidationImage.classList.remove('hidden');
+  message.classList.add('hidden');
 }
