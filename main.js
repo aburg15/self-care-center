@@ -1,10 +1,11 @@
-// query selector variables
+// query selectors
 var medidationImage = document.querySelector('#picture');
 var receiveMessageButton = document.querySelector('#receive-message-button');
 var affirmationRadioButton = document.querySelector('#affirmation-button');
 var mantraRadioButton = document.querySelector('#mantra-button');
 var clearButton = document.querySelector('#clear-button');
 var message = document.querySelector('#clear-message');
+
 
 // affirmation and mantra listings
 var affirmations = [
@@ -43,22 +44,17 @@ var mantras = [
 
 
 // event listeners
-receiveMessageButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  generateMessage();
-});
+receiveMessageButton.addEventListener('click', generateMessage);
+clearButton.addEventListener('click', clearMessage);
 
-clearButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  clearMessage();
-});
 
-// functions are below
+// functions
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function generateMessage() {
+  event.preventDefault();
   var newAffirmation = affirmations[getRandomIndex(affirmations)];
   var newMantra = mantras[getRandomIndex(mantras)];
   if (mantraRadioButton.checked || affirmationRadioButton.checked) {
@@ -71,16 +67,17 @@ function generateMessage() {
 function displayMessage(newMantra, newAffirmation) {
   if (mantraRadioButton.checked) {
     message.innerHTML = `
-  <h2 class='message'>${newMantra}</h2>
-`
+    <h2 class='message'>${newMantra}</h2>
+    `
   } else if (affirmationRadioButton.checked) {
     message.innerHTML = `
     <h2 class='message'>${newAffirmation}</h2>
-  `
+    `
   }
 }
 
 function clearMessage() {
+  event.preventDefault();
   medidationImage.classList.remove('hidden');
   message.classList.add('hidden');
 }
